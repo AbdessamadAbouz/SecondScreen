@@ -38,6 +38,7 @@ import com.farmerbb.secondscreen.fragment.dialog.QuickActionsDialogFragment;
 import com.farmerbb.secondscreen.service.LockDeviceService;
 import com.farmerbb.secondscreen.util.PluginBundleManagerQuickActions;
 import com.farmerbb.secondscreen.util.U;
+import com.ironsource.mediationsdk.IronSource;
 
 // This is the Quick Actions dialog, accessible by pressing the Quick Actions item in the action
 // bar in MainActivity, the Quick Actions button in the notification bar, or by choosing the
@@ -167,7 +168,7 @@ SharedPreferences.OnSharedPreferenceChangeListener {
     @Override
     protected void onPause() {
         super.onPause();
-
+        IronSource.onPause(this);
         // Unregister listener
         PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
 

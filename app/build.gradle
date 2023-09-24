@@ -4,7 +4,7 @@ repositories {
     google()
 
     maven {
-        url "https://jitpack.io"
+        url 'https://android-sdk.is.com/'
     }
 }
 
@@ -105,4 +105,10 @@ dependencies {
     implementation 'moe.banana:toast-compat:1.0.5'
     implementation 'org.lsposed.hiddenapibypass:hiddenapibypass:2.0'
     implementation group:'com.twofortyfouram', name:'android-plugin-api-for-locale', version:'[1.0.2,2.0['
+    implementation 'com.ironsource.sdk:mediationsdk:7.5.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.gms:play-services-appset:16.0.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.google.android.gms:play-services-basement:18.1.0'
 }

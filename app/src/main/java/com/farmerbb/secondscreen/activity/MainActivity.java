@@ -83,6 +83,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import com.ironsource.mediationsdk.IronSource;
+
 // This is the main activity of the application.  This is the activity that is launched when
 // SecondScreen is selected in the user's application launcher.
 // It shows fragments in a single-pane layout on phones and a dual-pane layout on tablets and larger
@@ -327,6 +329,7 @@ SystemAlertPermissionDialogFragment.Listener {
     @Override
     protected void onResume() {
         super.onResume();
+        IronSource.onResume(this);
 
         if(returningFromGrantingSystemAlertPermission) {
             returningFromGrantingSystemAlertPermission = false;
